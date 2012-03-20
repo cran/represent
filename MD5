@@ -1,0 +1,17 @@
+ba868c7b53dd6dbc3f79a1ff174419da *DESCRIPTION
+8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
+1da89bf944f9f4a3b5cd3aba55a0edfa *R/JRsMahaldist.R
+c5e615dd4b3e235ead4af587110c92cb *R/MBoxtest.R
+7767ffc7d13ebb371070329c06ac6020 *R/jrparams.R
+48e5a8bc0fc9264619ecfcb22a38bddd *data/DATASET.1.rda
+66e861b7fc054b45679ca86b2532a6e9 *data/DATASET.2.rda
+26770f4cb7fad1dc6eb17b55380fdcbc *data/DATASET.3.rda
+53410b1913beb247a93ee71c5144ba7d *data/DATASET.4.rda
+3f242cddbbf42263e4133becde81c52a *man/DATASET.1.Rd
+a96dd38b9a47e117c3fc5d86ddfefcc1 *man/DATASET.2.Rd
+2eba85784a2d0904b9cd2352a7a44bcd *man/DATASET.3.Rd
+80f61fee3deba901e2b9e38f052d8232 *man/DATASET.4.Rd
+74da51cbf90bf11e34c3d12ab12ff3e7 *man/JRsMahaldist.Rd
+9ac42d74214f4089f30b3a8520622c42 *man/MBoxtest.Rd
+5e720ec5f6b50d0709abf76a953e3b2b *man/jrparams.Rd
+0e2b3072bff3c32086a46c5cd6f47e81 *man/represent-package.Rd
