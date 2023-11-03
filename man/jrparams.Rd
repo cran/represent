@@ -1,56 +1,41 @@
 \name{jrparams}
 \alias{jrparams}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
 Assess similarity of two multidimensional data sets
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-This function computes three types of parameters to assess the representativity of two multidimensional data sets by a comparison of their structure.
-Representativity is expressed as similarity of: I) principal component analysis (PCA) loadings patterns; II) variance-covariance matrix structures; III) data set centroid locations.
-All parameters are computed in principal component (PC) space.
-These parameters are described in a publication by Jouan-Rimbaud et al (1998).
+  This function computes three types of parameters to assess the representativity of two multidimensional data sets by a comparison of their structure.
+  Representativity is expressed as similarity of: I) principal component analysis (PCA) loadings patterns; II) variance-covariance matrix structures; III) data set centroid locations.
+  All parameters are computed in principal component (PC) space.
+  These parameters are described in a publication by Jouan-Rimbaud et al (1998).
 }
 \usage{
-jrparams(BLOCK.1, BLOCK.2, ncomp = min(c(dim(BLOCK.1), dim(BLOCK.2))), Cscrit=0.6, Rscrit=0.6)
+jrparams(BLOCK.1,BLOCK.2,ncomp=min(c(dim(BLOCK.1),dim(BLOCK.2))),Cscrit=0.6,Rscrit=0.6)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{BLOCK.1}{
-%%     ~~Describe \code{BLOCK.1} here~~
-First multivariate data set (a numeric matrix)
-}
+  First multivariate data set (a numeric matrix)
+  }
   \item{BLOCK.2}{
-%%     ~~Describe \code{BLOCK.2} here~~
-Second multivariate data set (a numeric matrix), to be compared with the first
-}
+  Second multivariate data set (a numeric matrix), to be compared with the first
+  }
   \item{ncomp}{
-%%     ~~Describe \code{ncomp} here~~
-The number of PCs to compute the parameter values for
-}
+  The number of PCs to compute the parameter values for
+  }
   \item{Cscrit}{
-%%     ~~Describe \code{Cscrit} here~~
-The value of the "C*" parameter corresponding to the value of Box's M statistic being equal to its critical value
-}
+  The value of the "C*" parameter corresponding to the value of Box's M statistic being equal to its critical value
+  }
   \item{Rscrit}{
-%%     ~~Describe \code{Rscrit} here~~
-The value of the "R*" parameter corresponding to the Mahalanobis distance being equal to its critical value
-}
+  The value of the "R*" parameter corresponding to the Mahalanobis distance being equal to its critical value
+  }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
 For argument 'ncomp', the default is based on the smallest number of rows or columns (whichever is smaller) in either of both data sets to be compared.
 This number should be a proxy for the minimum of the 'ranks' (i.e., the actual dimensionalities) of both data sets.
 
 The default settings for the values of arguments 'Cscrit' and 'Rscrit' correspond to the values as recommended by Jouan-Rimbaud et al (1998) in their equations (9a) and (13a), respectively.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
 A numeric matrix with rows containing the computed values for in total six parameters that are described in Jouan-Rimbaud et al (1998).
 The nomenclature for the parameters as in that publication has been adopted here.
 Hence, the first two rows ("P" and "P*") of the output are informative of the similarity of the PCA loadings patterns of both data sets.
@@ -60,21 +45,17 @@ For all parameters, values equal to 1 indicate perfect similarity.
 The number of columns of the output matrix depends on the value of 'ncomp'.
 }
 \references{
-%% ~put references to the literature/web site here ~
 Jouan-Rimbaud D, Massart DL, Saby CA, Puel C: Determination of the representativity between two multidimensional data sets by a comparison of their structure. Chemometrics and Intelligent Laboratory Systems 40 (1998) 129-144.
 }
 \author{
-%%  ~~who you are~~
 Harmen Draisma
 }
 \note{
-%%  ~~further notes~~
 The function performs principal component analysis itself, so one can just input the original data sets (containing the original manifest variables).
 In general it is wise to compute the parameter values only for the significant principal components.
 Significance of principal components for both data sets to be compared can be assessed using e.g. scree plots, as available for instance in the 'psych' package.
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 \section{Warning}{
 Unexpected results might occur if the two data sets to be compared are of different rank, and the number of principal components to retain has not been passed to jrparams() as well (not tested).
 }
@@ -92,7 +73,5 @@ jrparams(DATASET.1, DATASET.2)
 #(values for all parameters should be unity)
 jrparams(DATASET.1, DATASET.1)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 %\keyword{ Jouan-Rimbaud }
-%\keyword{ representativity }% __ONLY ONE__ keyword per line
+%\keyword{ representativity }

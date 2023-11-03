@@ -7,7 +7,7 @@ function(BLOCK.1, BLOCK.2, ncomp=min(c(dim(BLOCK.1), dim(BLOCK.2))), Cscrit=0.6,
   n2 <- nrow(BLOCK.2)
   
   
-  ## I.) Comparison of the directions of the two data sets ('§2.3')
+  ## I.) Comparison of the directions of the two data sets ('subsection 2.3')
   #Carry out two separate PCA, one on the training set and one on the test
   #set, both centered independently
   
@@ -91,7 +91,7 @@ function(BLOCK.1, BLOCK.2, ncomp=min(c(dim(BLOCK.1), dim(BLOCK.2))), Cscrit=0.6,
   }
   
   
-  ## II.) Comparison of the variance-covariance matrices ('§2.4')
+  ## II.) Comparison of the variance-covariance matrices ('subsection 2.4')
   #Alternative PCA needed, project test set in model set up on basis of
   #training set
   
@@ -166,7 +166,7 @@ function(BLOCK.1, BLOCK.2, ncomp=min(c(dim(BLOCK.1), dim(BLOCK.2))), Cscrit=0.6,
       JR.RESULTS[4,p] <- Cs
   
   
-  ## III.) Comparison of the data set centroids ('§2.5')
+  ## III.) Comparison of the data set centroids ('subsection 2.5')
       #Mahalanobis distance computation
       #[D2,CI,prob,power] <- Mahal(wscores(:,1:p),groups) #Using weighted scores; see De Maesschalck et al, Chemom Intell Lab Syst 2000
       D2 <- JRsMahaldist(GSCORES)$Ds  #Using weighted scores; see De Maesschalck et al, Chemom Intell Lab Syst 2000

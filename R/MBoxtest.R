@@ -51,7 +51,7 @@ function(DATA, nmanvars) {
   
   
   #Prepare output
-  OUT<- list()
+  OUT <- list()
   #
   OUT$MB <- MB
   OUT$Sp <- Sp
